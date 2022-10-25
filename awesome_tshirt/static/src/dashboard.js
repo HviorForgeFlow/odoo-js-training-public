@@ -1,18 +1,15 @@
 /** @odoo-module **/
 
+//Import the counter from new js file
+import { Counter } from "./counter/counter";
 import { registry } from "@web/core/registry";
 
-const { Component, useState } = owl;
+const { Component } = owl;
 
-class AwesomeDashboard extends Component {
-    setup() {
-        this.state = useState({value: 1});
-    }
+class AwesomeDashboard extends Component {}
 
-    increment() {
-        this.state.value = this.state.value + 1;
-    }
-}
+//Define that this Dashboard uses that counter
+AwesomeDashboard.components = { Counter }
 AwesomeDashboard.template = "awesome_tshirt.clientaction";
 
 registry.category("actions").add("awesome_tshirt.dashboard", AwesomeDashboard);

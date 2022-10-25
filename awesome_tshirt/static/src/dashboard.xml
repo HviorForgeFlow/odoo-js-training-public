@@ -4,8 +4,8 @@
 <t t-name="awesome_tshirt.clientaction" owl="1">
     <div class="p-3">
         hello world
-        <p>Counter: <t t-esc="state.value"/></p>
-        <button class="btn btn-primary" t-on-click="increment">Increment</button>
+        <!-- Call the counter in a React like way-->
+        <Counter/>
     </div>
 </t>
 

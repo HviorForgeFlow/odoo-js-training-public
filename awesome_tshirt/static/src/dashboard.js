@@ -9,7 +9,11 @@ const { Component } = owl;
 
 class AwesomeDashboard extends Component {
     setup() {
-        this.todo = { id: 3, description: "buy milk", done: false };
+        this.todos = [
+            { id: 3, description: "buy milk", done: false },
+            { id: 4, description: "buy eggs", done: true },
+            { id: 5, description: "buy milk", done: false }
+        ];
     }
 }
 

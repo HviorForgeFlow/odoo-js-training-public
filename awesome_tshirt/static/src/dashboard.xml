@@ -6,7 +6,9 @@
         hello world
         <!-- Call the counter in a React like way-->
         <Counter/>
-        <Todo id="todo.id" description="todo.description" done="todo.done"/>
+        <t t-foreach="todos" t-as="todo" t-key="todo_index">
+            <Todo id="todo.id" description="todo.description" done="todo.done"/>
+        </t>
     </div>
 </t>
 
